@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from discord_slash import SlashCommand
 import config
+from countdown import print_time
 
 bot = commands.Bot(command_prefix="!")
 slash = SlashCommand(bot, sync_commands=True)
@@ -12,14 +13,14 @@ async def on_ready():
     print('Bot online.')
 
 @slash.slash(
-    name="test",
-    description="Test the discord bot",
+    name="time",
+    description="Find out how much time you have left for hacking\u2004⏰",
     guild_ids=guild_ids
 )
-async def _test(ctx):
+async def time(ctx):
     embed = discord.Embed(
-        title="Embed Title",
-        description= "Embed Description\n**New Line in Bold**",
+        title="Time remaining \u2004⏰",
+        description= f"{print_time()}\n\n[**Live Countdown**](https://kish-an.github.io/hackmed-countdown/)",
         colour=0x4fb1ed
     )
 
