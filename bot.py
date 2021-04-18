@@ -26,4 +26,35 @@ async def time(ctx):
 
     await ctx.send(embed=embed)
 
+@slash.slash(
+    name="schedule",
+    description="Events schedule for HackMed 2021 \u2004🗓️",
+    guild_ids=guild_ids
+)
+async def schedule(ctx):
+    await ctx.send(
+"""
+**Events Schedule** \u2004🗓️
+```c
++========================================+===================================+
+|                Saturday                |              Sunday               |
++========================================+===================================+
+| 08:00 - Registration begins            | 09:00 - Morning activity          |
++----------------------------------------+-----------------------------------+
+| 09:30 - Opening ceremony               | 11:30 - Pitching Workshop         |
++----------------------------------------+-----------------------------------+
+| 10:00 - Hacking starts & Team building | 15:00 - Hacking stops             |
++----------------------------------------+-----------------------------------+
+| 11:30 - Innovation skills              | 16:00 - Demos time                |
++----------------------------------------+-----------------------------------+
+| 13:00 - Cyberselves Workshop           | 17:00 - Finalists' presentations  |
++----------------------------------------+-----------------------------------+
+| 16:00 - Start-ups come from Hackathons | 17:45 - Awards & closing ceremony |
++----------------------------------------+-----------------------------------+
+| 19:00 - Evening activity: Pictionary!  | 18:30 - The end!                  |
++----------------------------------------+-----------------------------------+
+```
+"""
+    )
+
 bot.run(config.env['token'])
