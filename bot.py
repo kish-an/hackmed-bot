@@ -57,4 +57,14 @@ async def schedule(ctx):
 """
     )
 
+@slash.slash(
+    name="music",
+    description="Listen along to the HackMed 2021 spotify playlist\u2004🥳",
+    guild_ids=guild_ids
+)
+async def music(ctx):
+    msg = "**Spotify Playlist** 🎵 \nhttps://open.spotify.com/playlist/0JN8JvqQXKvO9zBfPx7bnO?si=f80ab81164354955>"
+
+    await ctx.send(msg)
+
 bot.run(config.env['token'])
