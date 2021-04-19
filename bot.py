@@ -43,11 +43,11 @@ async def schedule(ctx):
 +----------------------------------------+-----------------------------------+
 | 09:30 - Opening ceremony               | 11:30 - Pitching Workshop         |
 +----------------------------------------+-----------------------------------+
-| 10:00 - Hacking starts & Team building | 15:00 - Hacking stops             |
+| 10:00 - Hacking starts & Team building | 14:00 - Hacking stops             |
 +----------------------------------------+-----------------------------------+
-| 11:30 - Innovation skills              | 16:00 - Demos time                |
+| 11:30 - Innovation skills              | 15:00 - Demos time                |
 +----------------------------------------+-----------------------------------+
-| 13:00 - Cyberselves Workshop           | 17:00 - Finalists' presentations  |
+| 13:00 - Cyberselves Workshop           | 16:45 - Finalists' presentations  |
 +----------------------------------------+-----------------------------------+
 | 16:00 - Start-ups come from Hackathons | 17:45 - Awards & closing ceremony |
 +----------------------------------------+-----------------------------------+
