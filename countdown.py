@@ -1,7 +1,7 @@
 from datetime import datetime, time
 
-hackathon_start = datetime.strptime('2021-04-24 11:30:00', '%Y-%m-%d %H:%M:%S')
-hackathon_end = datetime.strptime('2021-04-25 11:30:00', '%Y-%m-%d %H:%M:%S')
+hackathon_start = datetime.strptime('2021-04-24 10:00:00', '%Y-%m-%d %H:%M:%S')
+hackathon_end = datetime.strptime('2021-04-25 14:00:00', '%Y-%m-%d %H:%M:%S')
 
 # Test date
 # now = datetime.strptime('2021-04-24 11:35:00', '%Y-%m-%d %H:%M:%S')
@@ -14,13 +14,12 @@ def date_delta(date1, date2):
 def time_left(seconds):
 	minutes, seconds = divmod(seconds, 60)
 	hours, minutes = divmod(minutes, 60)
-	days, hours = divmod(hours, 24)
 
 	return (hours, minutes, seconds)
 
 def print_time():
     message = ''
-    
+
     if datetime.now() < hackathon_start:
         message = "Hackathon has not started yet"
     elif datetime.now() >= hackathon_end:
