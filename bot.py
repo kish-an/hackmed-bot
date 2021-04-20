@@ -20,9 +20,11 @@ async def on_ready():
 async def time(ctx):
     embed = discord.Embed(
         title="Time remaining \u2004⏰",
-        description= f"{print_time()}\n\n[**Live Countdown**](https://kish-an.github.io/hackmed-countdown/)",
+        description=f"{print_time()}\n\n[**Live Countdown**](https://kish-an.github.io/hackmed-countdown/)",
         colour=0x4fb1ed
     )
+
+    embed.set_thumbnail(url="http://hackmed.uk/img/logo-2.png")
 
     await ctx.send(embed=embed)
 
