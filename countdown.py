@@ -7,18 +7,18 @@ hackathon_end = datetime.strptime('2021-04-25 14:00:00', '%Y-%m-%d %H:%M:%S')
 # now = datetime.strptime('2021-04-24 11:35:00', '%Y-%m-%d %H:%M:%S')
 
 def date_delta(date1, date2):
-  time_diff = date1 - date2
+    time_diff = date1 - date2
 
-  return time_diff.days * 24 * 3600 + time_diff.seconds
+    return time_diff.days * 24 * 3600 + time_diff.seconds
 
 def time_left(seconds):
-	minutes, seconds = divmod(seconds, 60)
-	hours, minutes = divmod(minutes, 60)
+    minutes, seconds = divmod(seconds, 60)
+    hours, minutes = divmod(minutes, 60)
 
-	return (hours, minutes, seconds)
+    return (hours, minutes, seconds)
 
 def print_time():
-    message = ''
+    message = ""
 
     if datetime.now() < hackathon_start:
         message = "Hackathon has not started yet"
